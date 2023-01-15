@@ -40,3 +40,6 @@ on a utilisé cloud stream vc kafka sinon on peut enlever les dep de kafka et le
 ![cas1Exec](https://user-images.githubusercontent.com/77898496/212558196-9fe77ac9-764b-40b6-b36a-5f9511ee5cf8.png)
 
 ## Cas 2 :
+
+![cas2](https://user-images.githubusercontent.com/77898496/212558353-6ea9fdf7-ced9-4cc2-b534-48f3d80a2343.png)
+
