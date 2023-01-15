@@ -22,4 +22,8 @@ public class PageEventRestController {
         streamBridge.send(topic,pageEvent); // entier entre 0 et 9000
         return pageEvent;
     }
+
+    // pr le consumer il y'a deux facons :
+    // @messagelistener de spring cloud stream ms une version deprecié pcq il y a mieux
+    // utiliser la programmation fonctionnelle (qu on va utilisé)
 }

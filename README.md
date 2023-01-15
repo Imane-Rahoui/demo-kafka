@@ -43,3 +43,15 @@ on a utilisé cloud stream vc kafka sinon on peut enlever les dep de kafka et le
 
 ![cas2](https://user-images.githubusercontent.com/77898496/212558353-6ea9fdf7-ced9-4cc2-b534-48f3d80a2343.png)
 
+pr le consumer il y'a deux facons :
+    - @messagelistener de spring cloud stream ms une version deprecié pcq il y a mieux
+    - utiliser la programmation fonctionnelle (qu on va utilisé)
+
+### Creation du service : PageEventService
+
+cet evenement va permettre d'afficher les messages de kafka
+quand on retourne type consumer -> spring cloud va prendre le reste en charge | c'est une abstraction de kafka le meme code va fonctionne sur rabbitMQ
+il faut ajouter un channel qui porte le meme nom que la fct alors :
+	- il faut ajouter des params au nv du file application.properties 
+
+#CONSUMER NOT WORKING
