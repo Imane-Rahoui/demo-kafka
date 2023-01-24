@@ -76,4 +76,4 @@ D:\5IIR\J2EE\TPS\TP5\kafka_2.13-3.3.1\bin> ``start windows\kafka-console-consume
 ![Capture d’écran 2023-01-24 183339](https://user-images.githubusercontent.com/77898496/214366014-302090c0-fc2d-4feb-8109-f388dbcf48ac.png)
 - Pour change le timing il suffit d'ajouter la ligne suivante ``spring.cloud.stream.poller.fixed-delay=100`` | normalement 1000 c'est 1s par def | 100 = ms (mtn + rapide)
 ![Capture d’écran 2023-01-24 183857](https://user-images.githubusercontent.com/77898496/214367427-3dce784a-64fe-4785-bb16-682af8740da3.png)
-
+[on peut faire le traitement par lot avec spring batch comme framework ou temps reel ( stream processing )avec kafka stream ]
