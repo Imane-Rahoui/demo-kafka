@@ -17,9 +17,9 @@ public class PageEventRestController {
     private StreamBridge streamBridge; // ça fonctionne vc ts les brokers
 
     @GetMapping("/publish/{topic}/{name}")
-    public PageEvent publish(@PathVariable String topic,@PathVariable String name){
-        PageEvent pageEvent=new PageEvent(name,Math.random()>0.5?"U1":"U2",new Date(),new Random().nextInt(9000));
-        streamBridge.send(topic,pageEvent); // entier entre 0 et 9000
+    public PageEvent publish(@PathVariable String topic, @PathVariable String name) {
+        PageEvent pageEvent = new PageEvent(name, Math.random() > 0.5 ? "U1" : "U2", new Date(), new Random().nextInt(9000)); // entier entre 0 et 9000
+        streamBridge.send(topic, pageEvent);
         return pageEvent;
     }
 

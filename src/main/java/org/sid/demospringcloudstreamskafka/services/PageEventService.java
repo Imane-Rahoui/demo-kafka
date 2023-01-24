@@ -8,7 +8,7 @@ import java.util.function.Consumer;
 
 @Service
 public class PageEventService {
-  /*  @Bean
+    @Bean
     public Consumer<PageEvent> pageEventConsumer(){
         System.out.println("called");
         return (input)->{
@@ -18,13 +18,6 @@ public class PageEventService {
             System.out.println(input.toString());
             System.out.println("****************");
         };
-    }*/
-  @Bean
-  public Consumer<PageEvent> pageEventConsumer(){
-      return (input)->{
-          System.out.println("**********************");
-          System.out.println(input.toString());
-          System.out.println("**********************");
-      };
-  }
+    }
+
 }
