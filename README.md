@@ -68,5 +68,12 @@ Pour le faire : <br>
 - Spring suppose que par defaut vous utilisez soit : <br>
 	- supplier
 	- consumer 
-	- function (cas 4)
-  pour lui signaler que c'est pas le cas il faut ajouter la ligne suivante pour qu'il puisse les déployer dan son contexte : ``spring.cloud.function.definition=pageEventConsumer;pageEventSupplier`` (Cette notion facilite le deploiment dans un contexte serverless exp lambda function d'Amazon)
+	- function (cas 4) <br>
+  pour lui signaler que c'est pas le cas il faut ajouter la ligne suivante pour qu'il puisse les déployer dan son contexte : ``spring.cloud.function.definition=pageEventConsumer;pageEventSupplier`` (Cette notion facilite le deploiment dans un contexte serverless exp lambda function d'Amazon) <br>
+### Resultat :
+- D'abord il faut lancer un consumer dans le topic R2 : <br> 
+D:\5IIR\J2EE\TPS\TP5\kafka_2.13-3.3.1\bin> ``start windows\kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic R2``
+![Capture d’écran 2023-01-24 183339](https://user-images.githubusercontent.com/77898496/214366014-302090c0-fc2d-4feb-8109-f388dbcf48ac.png)
+- Pour change le timing il suffit d'ajouter la ligne suivante ``spring.cloud.stream.poller.fixed-delay=100`` | normalement 1000 c'est 1s par def | 100 = ms (mtn + rapide)
+![Capture d’écran 2023-01-24 183857](https://user-images.githubusercontent.com/77898496/214367427-3dce784a-64fe-4785-bb16-682af8740da3.png)
+
