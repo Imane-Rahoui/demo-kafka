@@ -51,7 +51,13 @@ pr le consumer il y'a deux facons :
 
 cet evenement va permettre d'afficher les messages de kafka
 quand on retourne type consumer -> spring cloud va prendre le reste en charge | c'est une abstraction de kafka le meme code va fonctionne sur rabbitMQ
-il faut ajouter un channel qui porte le meme nom que la fct alors :
-	- il faut ajouter des params au nv du file application.properties 
+il faut ajouter un channel qui porte le meme nom que la fct alors : <br>
+	- il faut ajouter des params au nv du file application.properties : <br>
+	``spring.cloud.function.definition=pageEventConsumer``<br>
+	``spring.cloud.stream.bindings.pageEventConsumer-in-0.destination=R1`` <br>
+	- pour tester : 
+	<p align="center">
+![Capture d’écran 2023-01-24 174530](https://user-images.githubusercontent.com/77898496/214355329-ef931d5b-1fb2-4a95-8c0e-8e6be587828c.png)  ![2](https://user-images.githubusercontent.com/77898496/214357794-ab09f594-7212-4b9b-81dd-368478a57bd6.png)
+	</p>
 
-#CONSUMER NOT WORKING
+
