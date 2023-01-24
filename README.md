@@ -63,5 +63,10 @@ il faut ajouter un channel qui porte le meme nom que la fct alors : <br>
 ## Case 3 :
 Creation d'un supplier, qui va s'occuper d'envoyer un message à chaque seconde.
 Pour le faire : <br>
-- Il faut creer @Bean une fonction Supplier ( comme au nv du consumer en specifiant le type de retour Supplier du package java.util.function Spring cloud va comprendre qu'il s'agit d'un supplier. <br>
-- 
+- Il faut creer ``@Bean`` une fonction Supplier ( comme au nv du consumer en specifiant le type de retour Supplier du package java.util.function Spring cloud stream va comprendre qu'il s'agit d'un supplier. [par défaut chaque seconde va produire un event et cette fct va s'executer] <br>
+- La fonction Supplier va produire des messages dans topic donc le nom par defaut porte le meme nom que la fct supplier : ``spring.cloud.stream.bindings.pageEventSupplier-out-0.destination=R2``
+- Spring suppose que par defaut vous utilisez soit : <br>
+	- supplier
+	- consumer 
+	- function (cas 4)
+  pour lui signaler que c'est pas le cas il faut ajouter la ligne suivante pour qu'il puisse les déployer dan son contexte : ``spring.cloud.function.definition=pageEventConsumer;pageEventSupplier`` (Cette notion facilite le deploiment dans un contexte serverless exp lambda function d'Amazon)
