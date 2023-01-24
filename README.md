@@ -61,6 +61,7 @@ il faut ajouter un channel qui porte le meme nom que la fct alors : <br>
 	</p>
 
 ## Case 3 :
+
 Creation d'un supplier, qui va s'occuper d'envoyer un message à chaque seconde.
 Pour le faire : <br>
 - Il faut creer ``@Bean`` une fonction Supplier ( comme au nv du consumer en specifiant le type de retour Supplier du package java.util.function Spring cloud stream va comprendre qu'il s'agit d'un supplier. [par défaut chaque seconde va produire un event et cette fct va s'executer] <br>
@@ -77,7 +78,9 @@ D:\5IIR\J2EE\TPS\TP5\kafka_2.13-3.3.1\bin> ``start windows\kafka-console-consume
 - Pour change le timing il suffit d'ajouter la ligne suivante ``spring.cloud.stream.poller.fixed-delay=100`` | normalement 1000 c'est 1s par def | 100 = ms (mtn + rapide)
 ![Capture d’écran 2023-01-24 183857](https://user-images.githubusercontent.com/77898496/214367427-3dce784a-64fe-4785-bb16-682af8740da3.png)
 [on peut faire le traitement par lot avec spring batch comme framework ou temps reel ( stream processing )avec kafka stream ]
+
 ## Case 4 :
+
 Function Producer & Consumer en meme temps <br>
 - prend des input et return output du cout le type function prend deux types <br>
 - ``spring.cloud.function.definition=pageEventConsumer;pageEventSupplier;pageEventFunction`` |
@@ -91,4 +94,14 @@ D:\5IIR\J2EE\TPS\TP5\kafka_2.13-3.3.1\bin>``start windows\kafka-console-consumer
 http://localhost:8080/publish/R1/contact
 
 ![Capture d’écran 2023-01-24 190750](https://user-images.githubusercontent.com/77898496/214374032-de55c8c2-c2aa-4fb7-9fcf-c563b3d2e0d8.png)
+
+## Case 5 :
+
+tout ce qu'en vient de voir entre dans le cadre de traitement par enregistrement avec sql : select sum avg ... c'est du batch processing  - maintenance on va voir le stream processing en temps reel pour prendre par exemple des decisions et KAFKA STREAMS peut etre utilisé dans differents domaines d'application et ne necessite pas la mise en place d'un cluster comme c'est le cas pour spark stream.
+dans le cas du stream on a pas besoin de complexite des clusters - on a besoin d'un systeme leger.
+
+pour réumer : 
+- batch processing : si on traite data qui a arrivé il y a des minutes ou des heures 
+- micro batch : si ça depasse quelques min - 3 / 5 / 15 min  [ entre batch et stream ] proche du streaming ms il y a un décalage ]
+- stream : en temps reel 
 
