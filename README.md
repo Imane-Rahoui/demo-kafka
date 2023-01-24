@@ -147,7 +147,6 @@ on va utilisé une librairie js qui s'appel smoothie - utile pr les graphique dy
 - Ajout du contenu du site https://developer.confluent.io/quickstart/kafka-docker/
 - D:\5IIR\J2EE\TPS\TP5\demo-springcloudstreams-kafka> ``docker-compose up``
 
-### Commandes utiles :
 - `` docker-compose up -d`` | (si vs voulez en arriere plan)
-- `` docker exec --interactive --tty broker kafka-console-consumer --bootstrap-server broker:9092 --topic R2 ``
-- `` docker exec --interactive --tty broker kafka-console-producer --bootstrap-server broker:9092 --topic R2 ``
+- `` docker exec --interactive --tty broker kafka-console-consumer --bootstrap-server broker:9092 --topic R2 `` | done
+- `` docker exec --interactive --tty broker kafka-console-producer --bootstrap-server broker:9092 --topic R2 `` | done
