@@ -77,3 +77,18 @@ D:\5IIR\J2EE\TPS\TP5\kafka_2.13-3.3.1\bin> ``start windows\kafka-console-consume
 - Pour change le timing il suffit d'ajouter la ligne suivante ``spring.cloud.stream.poller.fixed-delay=100`` | normalement 1000 c'est 1s par def | 100 = ms (mtn + rapide)
 ![Capture d’écran 2023-01-24 183857](https://user-images.githubusercontent.com/77898496/214367427-3dce784a-64fe-4785-bb16-682af8740da3.png)
 [on peut faire le traitement par lot avec spring batch comme framework ou temps reel ( stream processing )avec kafka stream ]
+## Case 4 :
+Function Producer & Consumer en meme temps <br>
+- prend des input et return output du cout le type function prend deux types <br>
+- ``spring.cloud.function.definition=pageEventConsumer;pageEventSupplier;pageEventFunction`` |
+``spring.cloud.stream.bindings.pageEventFunction-in-0.destination=R1`` |
+``spring.cloud.stream.bindings.pageEventFunction-out-0.destination=R3``
+### Pour tester : 
+D:\5IIR\J2EE\TPS\TP5\kafka_2.13-3.3.1\bin>``start windows\kafka-console-producer.bat --broker-list localhost:9092 --topic R1``
+
+D:\5IIR\J2EE\TPS\TP5\kafka_2.13-3.3.1\bin>``start windows\kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic R3``
+
+http://localhost:8080/publish/R1/contact
+
+![Capture d’écran 2023-01-24 190750](https://user-images.githubusercontent.com/77898496/214374032-de55c8c2-c2aa-4fb7-9fcf-c563b3d2e0d8.png)
+
