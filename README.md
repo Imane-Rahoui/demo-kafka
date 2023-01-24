@@ -60,4 +60,8 @@ il faut ajouter un channel qui porte le meme nom que la fct alors : <br>
 ![Capture d’écran 2023-01-24 174530](https://user-images.githubusercontent.com/77898496/214355329-ef931d5b-1fb2-4a95-8c0e-8e6be587828c.png)  ![2](https://user-images.githubusercontent.com/77898496/214357794-ab09f594-7212-4b9b-81dd-368478a57bd6.png)
 	</p>
 
-
+## Case 3 :
+Creation d'un supplier, qui va s'occuper d'envoyer un message à chaque seconde.
+Pour le faire : <br>
+- Il faut creer @Bean une fonction Supplier ( comme au nv du consumer en specifiant le type de retour Supplier du package java.util.function Spring cloud va comprendre qu'il s'agit d'un supplier. <br>
+- 
