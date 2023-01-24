@@ -142,3 +142,6 @@ on va utilisé une librairie js qui s'appel smoothie - utile pr les graphique dy
 
 ![Capture d’écran 2023-01-24 212703](https://user-images.githubusercontent.com/77898496/214402478-0d1a8dca-d571-4811-a1e9-e38f6ae3a969.png)
 
+## Test sur Docker :
+- la creation du fichier docker-compose.yml 
+- D:\5IIR\J2EE\TPS\TP5\demo-springcloudstreams-kafka> ``docker-compose up``
