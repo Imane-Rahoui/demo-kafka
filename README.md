@@ -113,5 +113,15 @@ D:\5IIR\J2EE\TPS\TP5\kafka_2.13-3.3.1\bin>``start windows\kafka-console-consumer
 ### Not working
 D:\5IIR\J2EE\TPS\TP5\kafka_2.13-3.3.1\bin>``start windows\kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic R4 --property print.key=true --property print.value=true --property key.deserializer=org.apache.kafka.common.serialization.StringDeserializer --property value.deserilizer=org.apache.kafka.common.serialization.LongDeserializer ``
 
+### working but the value is not deserialized
 D:\5IIR\J2EE\TPS\TP5\kafka_2.13-3.3.1\bin>``start windows\kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic R4 --property print.key=true --property print.value=true --property key.deserializer=org.apache.kafka.common.serialization.StringDeserializer``   
+
+![Capture d’écran 2023-01-24 202952](https://user-images.githubusercontent.com/77898496/214390233-5f99c36f-d3a8-49d5-adbd-79521e100851.png)
+
+- Pour consommer les resultats dans une api rest : voir code PageEventRestController (le code est commenté)
+- Pour visualiser les résultats : http://localhost:8080/analytics
+
+![Capture d’écran 2023-01-24 205844](https://user-images.githubusercontent.com/77898496/214395996-97d820fb-fd2b-4d12-8e08-35b1d0618e69.png)
+
+
 
