@@ -83,5 +83,8 @@ Function Producer & Consumer en meme temps <br>
 - ``spring.cloud.function.definition=pageEventConsumer;pageEventSupplier;pageEventFunction`` |
 ``spring.cloud.stream.bindings.pageEventFunction-in-0.destination=R1`` |
 ``spring.cloud.stream.bindings.pageEventFunction-out-0.destination=R3``
+### Pour tester : 
+D:\5IIR\J2EE\TPS\TP5\kafka_2.13-3.3.1\bin>``start windows\kafka-console-producer.bat --broker-list localhost:9092 --topic R1``
 
+D:\5IIR\J2EE\TPS\TP5\kafka_2.13-3.3.1\bin>``start windows\kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic R3``
 
