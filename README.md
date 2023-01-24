@@ -127,5 +127,18 @@ Pour visualliser les res dans une page web :
 on va utilisé une librairie js qui s'appel smoothie - utile pr les graphique dynamiques 
 
 ### Le rendu :
+- affichage sans filtre :
+![h](https://user-images.githubusercontent.com/77898496/214400933-cdb5ab0a-4dea-4de7-b56f-cd48ad6d82c2.png)
 
+- courbe sans filtre :
 ![Capture d’écran 2023-01-24 211348](https://user-images.githubusercontent.com/77898496/214398700-728c8a31-ae0c-4bc5-b50c-a4487a11e9d9.png)
+
+- affichage avec filtre :
+![Capture d’écran 2023-01-24 212703](https://user-images.githubusercontent.com/77898496/214401384-0b3d7354-6f51-40f8-b249-1a41dfc56fb5.png)
+
+### l'utilité de share : 
+- optimisation pcq un seul flux pour ts les users 
+- dans notre cas meme sans share on va pas voir la difference visuellement parlons
+
+![Capture d’écran 2023-01-24 212703](https://user-images.githubusercontent.com/77898496/214402478-0d1a8dca-d571-4811-a1e9-e38f6ae3a969.png)
+
