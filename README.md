@@ -123,5 +123,9 @@ D:\5IIR\J2EE\TPS\TP5\kafka_2.13-3.3.1\bin>``start windows\kafka-console-consumer
 
 ![Capture d’écran 2023-01-24 205844](https://user-images.githubusercontent.com/77898496/214395996-97d820fb-fd2b-4d12-8e08-35b1d0618e69.png)
 
+Pour visualliser les res dans une page web : 
+on va utilisé une librairie js qui s'appel smoothie - utile pr les graphique dynamiques 
 
+### Le rendu :
 
+![Capture d’écran 2023-01-24 211348](https://user-images.githubusercontent.com/77898496/214398700-728c8a31-ae0c-4bc5-b50c-a4487a11e9d9.png)
