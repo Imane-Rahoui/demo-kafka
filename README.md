@@ -101,7 +101,17 @@ tout ce qu'en vient de voir entre dans le cadre de traitement par enregistrement
 dans le cas du stream on a pas besoin de complexite des clusters - on a besoin d'un systeme leger.
 
 pour réumer : 
-- batch processing : si on traite data qui a arrivé il y a des minutes ou des heures 
-- micro batch : si ça depasse quelques min - 3 / 5 / 15 min  [ entre batch et stream ] proche du streaming ms il y a un décalage ]
+
+- batch processing : si on traite data qui a arrivé il y a des minutes ou des heures | si on parle en petaOctet (purement big data) on fait appel à spark sinon spring batch si max des teraOctets (c est tres utilisé)
+- micro batch : si ça depasse quelques min - 3 / 5 / 15 min  [ entre batch et stream ] proche du streaming ms il y a un décalage ] 
 - stream : en temps reel 
+
+Code + config : voir les commentaires dans le code 
+
+D:\5IIR\J2EE\TPS\TP5\kafka_2.13-3.3.1\bin>``start windows\kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic R2`` (regarder ce qui se passe sur R1)
+
+### Not working
+D:\5IIR\J2EE\TPS\TP5\kafka_2.13-3.3.1\bin>``start windows\kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic R4 --property print.key=true --property print.value=true --property key.deserializer=org.apache.kafka.common.serialization.StringDeserializer --property value.deserilizer=org.apache.kafka.common.serialization.LongDeserializer ``
+
+D:\5IIR\J2EE\TPS\TP5\kafka_2.13-3.3.1\bin>``start windows\kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic R4 --property print.key=true --property print.value=true --property key.deserializer=org.apache.kafka.common.serialization.StringDeserializer``   
 
