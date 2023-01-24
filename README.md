@@ -80,8 +80,8 @@ D:\5IIR\J2EE\TPS\TP5\kafka_2.13-3.3.1\bin> ``start windows\kafka-console-consume
 ## Case 4 :
 Function Producer & Consumer en meme temps <br>
 - prend des input et return output du cout le type function prend deux types <br>
-- ``spring.cloud.function.definition=pageEventConsumer;pageEventSupplier;pageEventFunction`` <br>
-``spring.cloud.stream.bindings.pageEventFunction-in-0.destination=R1``
+- ``spring.cloud.function.definition=pageEventConsumer;pageEventSupplier;pageEventFunction`` |
+``spring.cloud.stream.bindings.pageEventFunction-in-0.destination=R1`` |
 ``spring.cloud.stream.bindings.pageEventFunction-out-0.destination=R3``
 
 
