@@ -88,3 +88,7 @@ D:\5IIR\J2EE\TPS\TP5\kafka_2.13-3.3.1\bin>``start windows\kafka-console-producer
 
 D:\5IIR\J2EE\TPS\TP5\kafka_2.13-3.3.1\bin>``start windows\kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic R3``
 
+http://localhost:8080/publish/R1/contact
+
+![Capture d’écran 2023-01-24 190750](https://user-images.githubusercontent.com/77898496/214374032-de55c8c2-c2aa-4fb7-9fcf-c563b3d2e0d8.png)
+
